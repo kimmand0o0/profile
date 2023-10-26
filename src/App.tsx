@@ -21,7 +21,7 @@ function App() {
         <Route path="/about" element={<AboutMe />} />
         <Route path="/posts" element={<Posts />} />
         <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/auth/tstory" element={<Auth />} />
+        <Route path="/auth/tistory" element={<Auth />} />
       </Routes>
       <Footer />
     </RecoilRoot>

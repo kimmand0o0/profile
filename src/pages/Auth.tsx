@@ -3,10 +3,10 @@ import { useQuery } from 'react-query';
 import { useSearchParams } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
 
-import { tstoryAccessToken } from 'recoil/atoms';
+import { tistoryTokenState } from 'recoil/atoms';
 
 const Auth = () => {
-  const [accessToken, setAccessToken] = useRecoilState(tstoryAccessToken);
+  const [tistoryToken, setTistoryToken] = useRecoilState(tistoryTokenState);
 
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -14,7 +14,7 @@ const Auth = () => {
 
   const getAccessToken = async () => {
     const response = await axios.get(
-      `https://www.tistory.com/oauth/access_token?client_id=${process.env.REACT_APP_TSTORY_CLIENT_ID}&client_secret=${process.env.REACT_APP_TSTORY_CLIENT_SECRET}&redirect_uri=${process.env.REACT_APP_TSTORY_CALLBACK_URL}&code=${code}&grant_type=authorization_code`,
+      `https://www.tistory.com/oauth/access_token?client_id=${process.env.REACT_APP_TISTORY_CLIENT_ID}&client_secret=${process.env.REACT_APP_TISTORY_CLIENT_SECRET}&redirect_uri=${process.env.REACT_APP_TISTORY_CALLBACK_URL}&code=${code}&grant_type=${process.env.REACT_APP_TISTORY_GRANT_TYPE}`,
     );
 
     console.log('response : ', response);

@@ -1,16 +1,34 @@
+import axios from 'axios';
 import { useEffect } from 'react';
+import { useQuery } from 'react-query';
 import { useRecoilState } from 'recoil';
 
-import { tstoryAccessToken } from 'recoil/atoms';
+import { tistoryAccessState } from 'recoil/atoms';
 
 const Posts = () => {
-  const [accessToken, setAccessToken] = useRecoilState(tstoryAccessToken);
+  const [accessState, setAccessState] = useRecoilState(tistoryAccessState);
 
   useEffect(() => {
-    if (!accessToken) {
-      window.location.href = `https://www.tistory.com/oauth/authorize?client_id=${process.env.REACT_APP_TSTORY_CLIENT_ID}&redirect_uri=${process.env.REACT_APP_TSTORY_CALLBACK_URL}&response_type=code`;
+    if (!accessState) {
+      window.location.href = `https://www.tistory.com/oauth/authorize?client_id=${process.env.REACT_APP_TISTORY_CLIENT_ID}&redirect_uri=${process.env.REACT_APP_TISTORY_CALLBACK_URL}&response_type=code`;
     }
-  }, [accessToken]);
+  }, [accessState]);
+
+  const getPosts = async () => {
+    const response = await axios.get(
+      `https://www.tistory.com/apis/post/list?access_token=${
+        process.env.REACT_APP_TISTORY_ACCESSTOKEN
+      }&output=${process.env.REACT_APP_TISTORY_OUTPUT_TYPE}&blogName=${
+        process.env.REACT_APP_TISTORY_BLOG_NAME
+      }&page=${1}`,
+    );
+
+    return response.data.data;
+  };
+
+  const data = useQuery('posts', getPosts);
+
+  console.log(data);
 
   return <></>;
 };

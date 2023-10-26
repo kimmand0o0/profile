@@ -1,7 +1,7 @@
 import BuyMeModal from 'components/BuyMeModal';
 import Typing from './Typing';
 
-import me from '../../assets/images/me.jpg';
+import me from '../../assets/images/me.png';
 
 const Introduce = () => {
   return (
@@ -11,7 +11,7 @@ const Introduce = () => {
           <Typing />
           <BuyMeModal />
         </div>
-        <img src={me} alt="me" className="w-2/5 rounded-full" />
+        <img src={me} alt="me" className="w-2/5" />
       </div>
     </>
   );

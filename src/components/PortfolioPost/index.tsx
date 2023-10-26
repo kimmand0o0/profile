@@ -1,4 +1,7 @@
 import Tag from './Tag';
+import { useSetRecoilState } from 'recoil';
+
+import { isPortfolioModalState } from 'recoil/atoms';
 
 //dummy data
 import imgLink from '../../assets/images/춘식이.jpg';
@@ -18,9 +21,17 @@ const content = '운동일지 & 습관형성 커뮤니티';
 const demo = 'https://healthier31.vercel.app/';
 
 const PortfolioPost = () => {
+  const isModal = useSetRecoilState(isPortfolioModalState);
+
+  const openPortfolioModal = () => {
+    isModal(true);
+
+    //모달에 들어갈 정보를 넣어준다.
+  };
+
   return (
     <>
-      <div className="m-3 hover:scale-105">
+      <div className="m-3 hover:scale-105" onClick={() => openPortfolioModal()}>
         <div className="w-full h-fit rounded-3xl bg-gray-50 overflow-hidden">
           <div className="max-w-[450px] h-[200px] overflow-hidden">
             <img src={imgLink} alt="img" className="object-cover" />
