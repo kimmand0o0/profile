@@ -9,7 +9,6 @@ import Main from 'pages/Main';
 import AboutMe from 'pages/AboutMe';
 import Portfolio from 'pages/Portfolio';
 import Posts from 'pages/Posts';
-import Auth from 'pages/Auth';
 
 function App() {
   return (
@@ -21,7 +20,6 @@ function App() {
         <Route path="/about" element={<AboutMe />} />
         <Route path="/posts" element={<Posts />} />
         <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/auth/tistory" element={<Auth />} />
       </Routes>
       <Footer />
     </RecoilRoot>

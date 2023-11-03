@@ -1,7 +1,7 @@
 const AboutMeIntroduction = () => {
   return (
     <>
-      <div className="pt-12 pb-6 px-4 border-b border-slate-300 flex flex-col font-[Orbit-Regular] ">
+      <div className="pt-12 pb-10 px-4 border-b border-slate-300 flex flex-col text-slate-800 font-[GmarketSansMedium] ">
         <span className="m-1">
           ✔️ 문제와 긍정적으로 마주하며, 상황에 적합한 해결 방법인지를 계속해서
           생각합니다.
@@ -11,7 +11,7 @@ const AboutMeIntroduction = () => {
           있습니다.
         </span>
         <span className="m-1">
-          ✔️ Git Convention을 지키며, Pull requests 리뷰를 통해 동료와 발전해
+          ✔️ Git Convention과, Pull requests 리뷰를 통해 동료와 발전해
           나갔습니다.
         </span>
       </div>

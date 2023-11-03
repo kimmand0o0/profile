@@ -1,36 +1,49 @@
 import axios from 'axios';
-import { useEffect } from 'react';
 import { useQuery } from 'react-query';
-import { useRecoilState } from 'recoil';
 
-import { tistoryAccessState } from 'recoil/atoms';
+import Post from 'components/Post';
 
 const Posts = () => {
-  const [accessState, setAccessState] = useRecoilState(tistoryAccessState);
-
-  useEffect(() => {
-    if (!accessState) {
-      window.location.href = `https://www.tistory.com/oauth/authorize?client_id=${process.env.REACT_APP_TISTORY_CLIENT_ID}&redirect_uri=${process.env.REACT_APP_TISTORY_CALLBACK_URL}&response_type=code`;
-    }
-  }, [accessState]);
-
   const getPosts = async () => {
-    const response = await axios.get(
-      `https://www.tistory.com/apis/post/list?access_token=${
-        process.env.REACT_APP_TISTORY_ACCESSTOKEN
-      }&output=${process.env.REACT_APP_TISTORY_OUTPUT_TYPE}&blogName=${
-        process.env.REACT_APP_TISTORY_BLOG_NAME
-      }&page=${1}`,
-    );
+    const {
+      data: {
+        tistory: {
+          item: { posts },
+        },
+      },
+    } = await axios.get('https://www.tistory.com/apis/post/list', {
+      params: {
+        access_token: process.env.REACT_APP_TISTORY_ACCESSTOKEN,
+        output: 'json',
+        blogName: process.env.REACT_APP_TISTORY_BLOG_NAME,
+        page: 1,
+      },
+    });
 
-    return response.data.data;
+    return posts;
   };
 
-  const data = useQuery('posts', getPosts);
+  const posts = useQuery('posts', getPosts);
 
-  console.log(data);
-
-  return <></>;
+  return (
+    <>
+      <div className="w-full h-screen flex justify-center scrollbar-hide">
+        <div className="w-full max-w-screen-md py-20 px-9 flex flex-col">
+          {posts.status === 'success' &&
+            posts.data.map((post: any, idx: number) => (
+              <Post
+                key={idx}
+                postId={post.id}
+                title={post.title}
+                postUrl={post.postUrl}
+                date={post.date}
+              />
+            ))}
+          {posts.status === 'loading' && <p>로딩 중</p>}
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default Posts;

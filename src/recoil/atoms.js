@@ -15,16 +15,6 @@ export const isBuyMeModalState = atom({
   default: false,
 });
 
-export const tistoryAccessState = atom({
-  key: 'tistoryAccessState',
-  default: false,
-});
-
-export const tistoryTokenState = atom({
-  key: 'tistoryTokenState',
-  default: '',
-});
-
 export const postsState = atom({
   key: 'posts',
   default: [],
