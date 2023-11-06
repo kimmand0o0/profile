@@ -19,7 +19,7 @@ const AudioButton = () => {
 
   return (
     <>
-      <div className="hover:scale-110">
+      <div className="hover:scale-110 md:block hidden">
         {play ? (
           // 일시정지 버튼
           <button onClick={stop}>

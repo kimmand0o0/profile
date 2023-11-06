@@ -46,19 +46,19 @@ const Post = (props: postProps) => {
         <div className="w-full flex justify-center italic  opacity-30">
           <p>... more ...</p>
         </div>
-        <div className="w-full flex items-center justify-between">
-          <div className="flex flex-row">
+        <div className="w-full flex flex-col md:flex-row items-center justify-between">
+          <div className="w-full flex flex-row items-start justify-start flex-wrap">
             {tags !== undefined &&
               tags.map((tag, idx) => (
                 <div
                   key={idx}
-                  className="text-xs bg-cyan-600 opacity-60 text-white mr-2 px-2 py-1 rounded-lg"
+                  className="text-xs bg-cyan-600 opacity-60 text-white mt-1 mr-2 px-2 py-1 rounded-lg"
                 >
                   {tag}
                 </div>
               ))}
           </div>
-          <div className="text-sm opacity-80 text-cyan-600">
+          <div className="w-full flex justify-end mt-1 text-sm opacity-80 text-cyan-600">
             <p>{date.slice(0, 10)}</p>
           </div>
         </div>

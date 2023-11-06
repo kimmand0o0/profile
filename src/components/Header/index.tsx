@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <>
       <header className="w-screen fixed inset-x-0 top-0 z-50 left-0 bg-white text-gray-700 body-font">
-        <div className="max-w-screen-md container mx-auto flex px-5 py-2 flex-row justify-between items-center">
+        <div className="max-w-screen-md container mx-auto flex px-5 py-2 flex-col md:flex-row justify-between items-center">
           <div className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
             <button
               onClick={() => {

@@ -33,7 +33,7 @@ const MainPosts = () => {
   return (
     <>
       <div className="w-full pt-14 px-4 flex flex-col justify-start items-start font-[GmarketSansMedium]">
-        <div className="w-full border-t border-slate-300 text-xl font-bold pl-2 py-4">
+        <div className="w-full border-t border-slate-300 text-xl pl-2 py-4">
           <p>Blog Posts</p>
         </div>
         <div className="w-full flex flex-row overflow-x-auto">
