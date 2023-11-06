@@ -66,7 +66,6 @@ const Posts = () => {
             ))}
 
           <div className="w-full p-16" ref={ref}>
-            {posts.status === 'loading' && <p>로딩 중</p>}
             {loading && (
               <div className="w-full flex  justify-center items-center text-gray-500">
                 <div role="status">
