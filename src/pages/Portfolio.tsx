@@ -1,5 +1,5 @@
 import PortfolioModal from 'components/PortfolioModal';
-import PortfolioPost from 'components/PortfolioPost';
+import PortfolioPosts from 'components/PortfolioPosts';
 import { useRecoilValue } from 'recoil';
 
 import { isPortfolioModalState } from 'recoil/portfolioAtoms';
@@ -12,11 +12,7 @@ const Portfolio = () => {
       <div className="w-full my-20 flex justify-center scrollbar-hide">
         {isModal && <PortfolioModal />}
         <div className="max-w-screen-md px-2 md:grid md:grid-cols-2">
-          <PortfolioPost />
-          <PortfolioPost />
-          <PortfolioPost />
-          <PortfolioPost />
-          <PortfolioPost />
+          <PortfolioPosts />
         </div>
       </div>
     </>

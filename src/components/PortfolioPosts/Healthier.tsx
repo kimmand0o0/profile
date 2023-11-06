@@ -3,8 +3,8 @@ import { useSetRecoilState } from 'recoil';
 
 import { isPortfolioModalState } from 'recoil/portfolioAtoms';
 
-//dummy data
-import imgLink from '../../assets/images/춘식이.jpg';
+import imgLink from '../../assets/portfolio/healthier/title.png';
+
 const tags = [
   '부팀장',
   '프론트엔드',
