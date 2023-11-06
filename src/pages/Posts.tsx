@@ -39,7 +39,10 @@ const Posts = () => {
                 date={post.date}
               />
             ))}
-          {posts.status === 'loading' && <p>로딩 중</p>}
+
+          <div className="w-full p-16">
+            {posts.status === 'loading' && <p>로딩 중</p>}
+          </div>
         </div>
       </div>
     </>

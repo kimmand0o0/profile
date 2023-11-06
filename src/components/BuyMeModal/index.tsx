@@ -16,7 +16,7 @@ const BuyMeModal = () => {
       {isModal && <Modal />}
       <button
         onClick={() => handleModal()}
-        className="my-8 py-3 px-6 rounded-2xl bg-amber-200 text-xl text-gray-500 font-[NeoDunggeunmoPro-Regular] hover:scale-105"
+        className="max-w-xs my-8 py-3 px-6 rounded-2xl bg-amber-200 text-xl text-gray-500 font-[NeoDunggeunmoPro-Regular] hover:scale-105"
       >
         Buy Me A Coffee ☕️
       </button>

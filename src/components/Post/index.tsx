@@ -35,10 +35,10 @@ const Post = (props: postProps) => {
         className="m-3 p-6 border hover:cursor-pointer rounded-xl font-[GmarketSansMedium]"
         onClick={() => window.open(postUrl)}
       >
-        <p className="font-bold">{title}</p>
+        <p className="font-bold text-lg">{title}</p>
         <div
           dangerouslySetInnerHTML={{ __html: content }}
-          className="opacity-40 h-20 overflow-hidden my-6"
+          className="opacity-40 h-20 overflow-hidden my-6 text-sm"
         ></div>
         <div className="w-full flex justify-center italic opacity-50">
           <p>... more ...</p>
