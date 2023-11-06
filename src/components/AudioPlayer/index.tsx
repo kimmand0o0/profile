@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react';
 
 import myAudio from '../../assets/musics/myAudio.mp3';
 
-import { playState } from '../../recoil/atoms';
+import { playState } from '../../recoil/basicAtoms';
 
 function AudioPlayer() {
   const myRef = useRef<HTMLAudioElement>(null);

@@ -1,9 +1,10 @@
 import { useRef } from 'react';
 import { useSetRecoilState } from 'recoil';
 
-import { isPortfolioModalState } from 'recoil/atoms';
 import Gallery from './Gallery';
 import Title from './Title';
+
+import { isPortfolioModalState } from 'recoil/portfolioAtoms';
 
 const PortfolioModal = () => {
   const outSection = useRef(null);

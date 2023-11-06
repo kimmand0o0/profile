@@ -1,6 +1,6 @@
 import { useRecoilState } from 'recoil';
 
-import { playState } from '../../recoil/atoms';
+import { playState } from '../../recoil/basicAtoms';
 
 import pauseButton from '../../assets/icons/pause.svg';
 import playButton from '../../assets/icons/play.svg';

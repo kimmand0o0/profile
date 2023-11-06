@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { useSetRecoilState } from 'recoil';
 
-import { isBuyMeModalState } from 'recoil/atoms';
+import { isBuyMeModalState } from 'recoil/basicAtoms';
 
 import kakaoTitle from '../../assets/images/kakaoQR_title.png';
 import kakaoQR from '../../assets/images/kakaoQR.png';

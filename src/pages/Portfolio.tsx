@@ -2,7 +2,7 @@ import PortfolioModal from 'components/PortfolioModal';
 import PortfolioPost from 'components/PortfolioPost';
 import { useRecoilValue } from 'recoil';
 
-import { isPortfolioModalState } from 'recoil/atoms';
+import { isPortfolioModalState } from 'recoil/portfolioAtoms';
 
 const Portfolio = () => {
   const isModal = useRecoilValue(isPortfolioModalState);

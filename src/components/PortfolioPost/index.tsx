@@ -1,7 +1,7 @@
 import Tag from './Tag';
 import { useSetRecoilState } from 'recoil';
 
-import { isPortfolioModalState } from 'recoil/atoms';
+import { isPortfolioModalState } from 'recoil/portfolioAtoms';
 
 //dummy data
 import imgLink from '../../assets/images/춘식이.jpg';

@@ -2,7 +2,7 @@ import { useLocation, useNavigate } from 'react-router';
 import { useEffect } from 'react';
 import { useRecoilState } from 'recoil';
 
-import { userPathState } from '../../recoil/atoms';
+import { userPathState } from '../../recoil/basicAtoms';
 
 const Nav = () => {
   const navigate = useNavigate();

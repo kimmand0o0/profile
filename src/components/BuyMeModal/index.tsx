@@ -2,7 +2,7 @@ import { useRecoilState } from 'recoil';
 
 import Modal from './Modal';
 
-import { isBuyMeModalState } from 'recoil/atoms';
+import { isBuyMeModalState } from 'recoil/basicAtoms';
 
 const BuyMeModal = () => {
   const [isModal, setIsModal] = useRecoilState(isBuyMeModalState);
