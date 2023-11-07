@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "guest_books",
+  "info": {
+    "singularName": "guest-book",
+    "pluralName": "guest-books",
+    "displayName": "GuestBook"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "password": {
+      "type": "password"
+    },
+    "content": {
+      "type": "text"
+    },
+    "private": {
+      "type": "boolean"
+    }
+  }
+}
