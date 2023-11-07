@@ -36,7 +36,7 @@ const MainPosts = () => {
         <div className="w-full border-t border-slate-300 text-xl pl-2 py-4">
           <p>Blog Posts</p>
         </div>
-        <div className="w-full flex flex-row overflow-x-auto">
+        <div className="w-full flex flex-row overflow-x-auto scrollbar-hide">
           {!isLoading &&
             posts.map((post: any, idx: number) => (
               <Post
