@@ -4,7 +4,8 @@
   "info": {
     "singularName": "guest-book",
     "pluralName": "guest-books",
-    "displayName": "GuestBook"
+    "displayName": "GuestBook",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,16 +13,28 @@
   "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string"
-    },
-    "password": {
-      "type": "password"
+      "type": "string",
+      "required": true,
+      "default": "익명의 작성자"
     },
     "content": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "private": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "password": {
+      "type": "string",
+      "required": true
+    },
+    "recomment": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::recomment.recomment",
+      "inversedBy": "guest_book"
     }
   }
 }

@@ -1,3 +1,4 @@
+import GuestBookPost from 'components/GuestBookPost';
 import GuestBookPostBox from '../components/GuestBookPostBox';
 
 const GuestBook = () => {
@@ -14,6 +15,7 @@ const GuestBook = () => {
             </div>
           </div>
           <GuestBookPostBox />
+          <GuestBookPost />
         </div>
       </div>
     </>

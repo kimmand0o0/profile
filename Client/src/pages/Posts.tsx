@@ -64,7 +64,6 @@ const Posts = () => {
                 date={post.date}
               />
             ))}
-
           <div className="w-full p-16" ref={ref}>
             {loading && (
               <div className="w-full flex  justify-center items-center text-gray-500">
