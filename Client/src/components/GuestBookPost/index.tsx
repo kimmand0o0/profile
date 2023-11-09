@@ -20,16 +20,16 @@ const GuestBookPost = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    if (page.page !== 1) {
-      setLoading(true);
-      setTimeout(() => {
-        if (posts.contents.length < posts.total) {
-          getPosts();
-        } else {
-          setLoading(false);
-        }
-      }, 1000);
-    }
+    setLoading(true);
+    setTimeout(() => {
+      if (posts.contents.length >= posts.total) {
+        setLoading(false);
+      } else {
+        getPosts();
+
+        setLoading(false);
+      }
+    }, 1000);
   }, [inView]);
 
   const getPosts = async () => {
@@ -46,17 +46,23 @@ const GuestBookPost = () => {
       },
     );
 
-    const newContents = [...posts.contents, ...data.data];
+    if (
+      posts.contents.findIndex(
+        (content: any) => content.id === data.data[0].id,
+      ) === -1
+    ) {
+      const newContents = [...posts.contents, ...data.data];
 
-    setPosts({
-      total: data.meta.pagination.total,
-      contents: newContents,
-    });
+      setPosts({
+        total: data.meta.pagination.total,
+        contents: newContents,
+      });
+    }
+
     setPage({
       page: page.page + 1,
       totalPage: data.meta.pagination.pageCount,
     });
-    setLoading(false);
   };
 
   const guestPosts = useQuery('guestbooks', getPosts);
