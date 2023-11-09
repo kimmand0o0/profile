@@ -20,14 +20,16 @@ const GuestBookPost = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      if (posts.contents.length < posts.total) {
-        getPosts();
-      } else {
-        setLoading(false);
-      }
-    }, 1000);
+    if (page.page !== 1) {
+      setLoading(true);
+      setTimeout(() => {
+        if (posts.contents.length < posts.total) {
+          getPosts();
+        } else {
+          setLoading(false);
+        }
+      }, 1000);
+    }
   }, [inView]);
 
   const getPosts = async () => {
