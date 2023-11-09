@@ -12,7 +12,9 @@ const GuestBookBox = () => {
   const [content, setContent] = useState('');
   const [secret, setSecret] = useState(false);
 
-  const postGuestbook = async () => {
+  const postGuestbook = async (event: any) => {
+    event.preventDefault();
+
     if (
       content.replace(/\s/g, '').length === 0 ||
       password.replace(/\s/g, '').length === 0
@@ -109,7 +111,7 @@ const GuestBookBox = () => {
             </div>
             <button
               className="mt-6 md:mt-0 border bg-gray-100 shadow-md rounded-lg px-4 py-2 hover:bg-cyan-800 hover:text-white hover:animate-bounce"
-              onClick={() => postGuestbook()}
+              onClick={(event) => postGuestbook(event)}
             >
               <p>방명록 남기기</p>
             </button>
