@@ -1,5 +1,5 @@
 {
-  "name": "my-project",
+  "name": "strapi",
   "version": "0.1.0",
   "private": true,
   "description": "A Strapi application",
@@ -14,18 +14,19 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/plugin-documentation": "^4.15.0",
     "@strapi/plugin-i18n": "4.15.0",
     "@strapi/plugin-users-permissions": "4.15.0",
     "@strapi/strapi": "4.15.0",
-    "better-sqlite3": "8.6.0"
+    "better-sqlite3": "8.6.0",
+    "mysql": "^2.18.1",
+    "pg": "^8.11.3",
+    "postgres": "^3.3.5"
   },
-  "devDependencies": {},
   "engines": {
-    "node": ">=18.0.0 <=20.x.x",
+    "node": ">=16.0.0 <=20.x.x",
     "npm": ">=6.0.0"
   },
   "strapi": {
-    "uuid": "0e8f7930-2610-4117-a699-a7657e6dab3b"
+    "uuid": "3b4d0f0a-22e9-43f1-92bf-3625d7e5062d"
   }
 }
