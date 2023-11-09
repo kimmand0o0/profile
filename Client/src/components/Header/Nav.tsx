@@ -17,7 +17,7 @@ const Nav = () => {
 
   return (
     <>
-      <div className="w-full md:w-2/3 container mx-auto flex flex-wrap flex-row justify-end items-center text-slate-400 text-sm font-[GmarketSansMedium]">
+      <div className="w-full md:w-2/3 container mx-auto flex flex-wrap flex-row justify-center md:justify-end items-center text-slate-400 text-sm font-[GmarketSansMedium]">
         <button
           className={`${
             path === '/about' && 'text-gray-800'
