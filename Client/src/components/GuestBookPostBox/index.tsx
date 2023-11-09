@@ -40,6 +40,9 @@ const GuestBookBox = () => {
         contents: [response.data.data, ...posts.contents],
       };
       setPosts(newPosts);
+      setName('');
+      setContent('');
+      setPassword('');
     } else {
       alert('등록에 실패하였습니다.');
     }
@@ -58,6 +61,7 @@ const GuestBookBox = () => {
                 type="text"
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5 "
                 placeholder="ex) 김혜란"
+                value={name}
                 required
                 onChange={(event) => setName(event.target.value)}
               />
@@ -71,6 +75,7 @@ const GuestBookBox = () => {
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5 "
                 placeholder="수정, 삭제, 비밀글 확인 시 필요합니다."
                 required
+                value={password}
                 onChange={(event) => setPassword(event.target.value)}
               />
             </div>
@@ -83,6 +88,7 @@ const GuestBookBox = () => {
               className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-cyan-500 focus:border-cyan-500 "
               placeholder="이곳에 메세지를 남겨주세요."
               required
+              value={content}
               onChange={(event) => setContent(event.target.value)}
             />
           </div>
