@@ -26,8 +26,9 @@ const TAGS = [
 ];
 const GITHUB = 'https://github.com/E-GaeMuYac/Pillnuts_BE.git';
 const SINCE = '2022.12.30 - 2023.02.10';
-const TITLE = 'Healthier : 더 건강하게';
-const CONTENT = '- 운동일지 & 습관형성 커뮤니티';
+const TITLE = 'Pillnuts : 약의 성분도 파헤쳐 보자';
+const CONTENT =
+  '- 식약처의 정보를 바탕으로 약의 성분을 그래프를 이용해 시각적으로 보여주는 사이트';
 const PERSONNEL = '프론트엔드 3 | 백엔드 3 | 디자이너 1';
 const WHAT_DID_I_DO = [
   'Axios를 이용하여 공공데이터를 가공 및 저장 하였습니다. 공공 api로 제공되는 데이터를 우리 데이터베이스로 옮기는 과정에서 불규칙적으로 Axios Timeout Error가 발생하였습니다. 컴퓨터 사양과 Axios 시간 조건을 높였지만 동일한 에러가 발생하였습니다. Error 로그에 표시되는 페이지 번호를 query string에 담아 api에 리다이렉트 하여 해당 페이지부터 다시 업데이트 하도록 작성하였습니다.',

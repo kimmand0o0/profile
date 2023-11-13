@@ -15,18 +15,19 @@ const PortfolioList = () => {
         <div className="px-4 pt-1 h-full flex md:flex-col justify-center items-start text-xs">
           <button
             className="py-2 md:px-0 px-2 text-white"
-            onClick={() => changePortfiloState('healthier')}
+            onClick={() => changePortfiloState('profile')}
           >
             <p
               className={`${
-                portfolioState === 'healthier'
+                portfolioState === 'profile'
                   ? 'font-bold text-cyan-900'
                   : 'none'
               }`}
             >
-              ◦ H e a l t h i e r
+              ◦ P r o f i l e
             </p>
           </button>
+
           <button
             className="py-2 md:px-0 px-2 text-white"
             onClick={() => changePortfiloState('pillnuts')}
@@ -43,16 +44,16 @@ const PortfolioList = () => {
           </button>
           <button
             className="py-2 md:px-0 px-2 text-white"
-            onClick={() => changePortfiloState('profile')}
+            onClick={() => changePortfiloState('healthier')}
           >
             <p
               className={`${
-                portfolioState === 'profile'
+                portfolioState === 'healthier'
                   ? 'font-bold text-cyan-900'
                   : 'none'
               }`}
             >
-              ◦ P r o f i l e
+              ◦ H e a l t h i e r
             </p>
           </button>
         </div>

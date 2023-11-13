@@ -47,11 +47,20 @@ const GuestBookPost = () => {
     );
 
     if (
+      posts.contents.length !== 0 &&
+      data.data.length !== 0 &&
       posts.contents.findIndex(
         (content: any) => content.id === data.data[0].id,
       ) === -1
     ) {
       const newContents = [...posts.contents, ...data.data];
+
+      setPosts({
+        total: data.meta.pagination.total,
+        contents: newContents,
+      });
+    } else if (posts.contents.length === 0) {
+      const newContents = [...data.data];
 
       setPosts({
         total: data.meta.pagination.total,
