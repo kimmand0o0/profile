@@ -5,52 +5,38 @@ import Tag from './Tag';
 
 import github from '../../assets/icons/github.svg';
 
-import titleImg from '../../assets/portfolio/healthier/title.png';
-import signupImg from '../../assets/portfolio/healthier/sign up.gif';
-import loginImg from '../../assets/portfolio/healthier/login.gif';
-import oauthImg from '../../assets/portfolio/healthier/oauth.gif';
-import todopageImg from '../../assets/portfolio/healthier/todopage.gif';
-import todopageEditImg from '../../assets/portfolio/healthier/todopage_edit.gif';
-import communityImg from '../../assets/portfolio/healthier/community.gif';
-import communityEditImg from '../../assets/portfolio/healthier/community_edit.gif';
-import scrapImg from '../../assets/portfolio/healthier/scrap.gif';
-import mypageImg from '../../assets/portfolio/healthier/mypage.gif';
-import mypageEditImg from '../../assets/portfolio/healthier/mypage_edit.gif';
+import titleImg from '../../assets/portfolio/pillnuts/title.png';
+import awardImg from '../../assets/portfolio/pillnuts/award.jpeg';
 
 const imageList = [
   { src: titleImg, alt: 'title' },
-  { src: signupImg, alt: 'signup' },
-  { src: loginImg, alt: 'login' },
-  { src: oauthImg, alt: 'oauth' },
-  { src: todopageImg, alt: 'todopage' },
-  { src: todopageEditImg, alt: 'todopageEdit' },
-  { src: communityImg, alt: 'community' },
-  { src: communityEditImg, alt: 'communityEdit' },
-  { src: scrapImg, alt: 'scrap' },
-  { src: mypageImg, alt: 'mypage' },
-  { src: mypageEditImg, alt: 'mypageEdit' },
+  { src: awardImg, alt: 'award' },
 ];
 const TAGS = [
-  '부팀장',
-  '프론트엔드',
-  'React',
-  'Styled-Components',
+  '백엔드',
+  'Node.js',
+  'Express',
   'Axios',
-  'AWS(S3)',
-  'Verser',
+  'MySql',
+  'Sequelize',
+  'AWS',
+  'ECS',
+  'EC2',
+  'RAMDA',
 ];
-const GITHUB = 'https://github.com/codestates-seb/seb45_main_031';
-const SINCE = '2023.08.22 - 2023.09.20';
+const GITHUB = 'https://github.com/E-GaeMuYac/Pillnuts_BE.git';
+const SINCE = '2022.12.30 - 2023.02.10';
 const TITLE = 'Healthier : 더 건강하게';
 const CONTENT = '- 운동일지 & 습관형성 커뮤니티';
-const PERSONNEL = '프론트엔드 3 | 백엔드 3';
+const PERSONNEL = '프론트엔드 3 | 백엔드 3 | 디자이너 1';
 const WHAT_DID_I_DO = [
-  '프로젝트 완성을 목표로 빠르게 적용할 수 있으며, 사이드 이펙트가 적은 라이브러리를 찾아 사용하였습니다.',
-  '백엔드와 프론트 동료들 사이에서 소통의 징검다리 역할을 하였습니다.',
+  'Axios를 이용하여 공공데이터를 가공 및 저장 하였습니다. 공공 api로 제공되는 데이터를 우리 데이터베이스로 옮기는 과정에서 불규칙적으로 Axios Timeout Error가 발생하였습니다. 컴퓨터 사양과 Axios 시간 조건을 높였지만 동일한 에러가 발생하였습니다. Error 로그에 표시되는 페이지 번호를 query string에 담아 api에 리다이렉트 하여 해당 페이지부터 다시 업데이트 하도록 작성하였습니다.',
+  'Node-cron을 이용하여 데이터 업데이트를 스케줄링 하였습니다.',
+  'Passport를 통해 Oauth 소셜 로그인을 구현 하였습니다. 카카오, 네이버, 구글 로그인을 모두 구현하기 위해 직접 api를 작성하는 것보다 Passport를 통하여 관리하는 것으로 의사결정 하였습니다. 라이브러리를 사용하는 과정에서 백엔드 서버에서 화면이 멈추는 문제가 발생하였습니다. 이를 프론트 사이트로 redirect하여 query-string으로 유저 정보와 토큰을 담아서 넘기는 방법을 사용하였습니다.',
+  'JsonWepToken을 이용하여 회원 인증을 진행 하였습니다.',
 ];
 const RETROSPECT = [
-  '기획과 figma작업, API 협의, 코드작업, 배포까지 진행하며 정말 프로젝트의 전체를 이해할 수 있는 기회가 되었습니다.',
-  '프로젝트 진행 중 리팩토링하면서 비즈니스 로직에 대해 고민해보고 꾸준히 개선점을 찾아가는 경험을 해볼 수 있었습니다.',
+  'JWT를 이용하여 세션의 필요성을 줄였지만 토큰이 탈취 되었을 경우를 대비 하지는 못하였습니다. 서버측에 로그아웃 한 유저의 토큰을 블랙리스트로 DB에 저장을 하거나 주기적으로 secret-key를 변경해주는 방법을 적용시는 방법을 생각했습니다.',
 ];
 
 const PortfolioPost = () => {
