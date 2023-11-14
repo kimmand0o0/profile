@@ -100,6 +100,7 @@ const PortfolioPost = () => {
       slideRef.current.style.transition = '';
     }
 
+    setCustomInterval(10000);
     setSlideIndex(slideIndex + 1);
 
     setTimeout(() => {
@@ -114,6 +115,7 @@ const PortfolioPost = () => {
       slideRef.current.style.transition = '';
     }
 
+    setCustomInterval(10000);
     setSlideIndex(slideIndex - 1);
 
     setTimeout(() => {
