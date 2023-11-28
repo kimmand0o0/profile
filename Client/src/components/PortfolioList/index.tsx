@@ -5,14 +5,14 @@ const PortfolioList = () => {
   const [portfolioState, setPortfolioState] =
     useRecoilState(portfolioStateAtom);
 
-  const changePortfiloState = (text: any) => {
+  const changePortfiloState = (text: string) => {
     setPortfolioState(text);
   };
 
   return (
     <>
-      <div className="md:w-1/5 md:h-screen max-h-[calc(100%-1rem)] fixed top-20 md:top-0 md:left-0 font-[GmarketSansMedium]">
-        <div className="px-4 pt-1 h-full flex md:flex-col justify-center items-start text-xs">
+      <div className="md:h-screen max-h-[calc(100%-1rem)] fixed top-20 md:top-0 md:right-0 md:pr-4 font-[GmarketSansMedium]">
+        <div className="px-4 pt-1 h-full flex md:flex-col justify-center items-end text-xs">
           <button
             className="py-2 md:px-0 px-2 text-white"
             onClick={() => changePortfiloState('profile')}
@@ -24,7 +24,7 @@ const PortfolioList = () => {
                   : 'none'
               }`}
             >
-              ◦ P r o f i l e
+              P r o f i l e ◦
             </p>
           </button>
 
@@ -39,7 +39,7 @@ const PortfolioList = () => {
                   : 'none'
               }`}
             >
-              ◦ P i l l n u t s
+              P i l l n u t s ◦
             </p>
           </button>
           <button
@@ -53,7 +53,7 @@ const PortfolioList = () => {
                   : 'none'
               }`}
             >
-              ◦ H e a l t h i e r
+              H e a l t h i e r ◦
             </p>
           </button>
         </div>

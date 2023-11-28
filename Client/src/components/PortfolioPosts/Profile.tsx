@@ -112,7 +112,7 @@ const PortfolioPost = () => {
   return (
     <>
       <div className="w-full h-screen max-h-[calc(100%-1rem)] pt-32 pb-24 md:py-20 font-[GmarketSansMedium]">
-        <div className="w-full h-full px-7 md:px-12 md:pl-44">
+        <div className="w-full h-full px-7 md:pl-14 md:pr-40">
           <div className="bg-white w-full h-full rounded-2xl py-4 px-4 md:px-6 flex flex-col md:flex-row">
             <div className="md:hidden text-xl font-bold border-b-2 border-cyan-500 my-2">
               {TITLE}
@@ -206,13 +206,13 @@ const PortfolioPost = () => {
                 </div>
               </div>
             </div>
-            <div className="absolute z-10 bottom-20 right-4 animate-bounce">
+            <div className="absolute z-10 top-20 md:right-32 animate-bounce">
               <button>
                 <a href={GITHUB} target="_blank">
                   <img
                     src={github}
                     alt="githubIcon"
-                    className="h-14 md:h-20 bg-white md:hover:bg-gray-300 p-1.5 md:p-2 rounded-full shadow-xl border border-gray-50"
+                    className="h-14 md:h-20 bg-white border border-gray-50 p-1.5 md:p-2 rounded-full shadow-2xl "
                   />
                 </a>
               </button>

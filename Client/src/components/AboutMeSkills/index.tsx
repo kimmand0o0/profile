@@ -1,3 +1,5 @@
+import javascriptIcon from '../../assets/icons/javascript.svg';
+
 const AboutMeSkills = () => {
   return (
     <>
@@ -9,7 +11,8 @@ const AboutMeSkills = () => {
           <div className="min-w-[50%] pl-4 py-1 border-l border-slate-100">
             <p className="py-2 font-bold">Development Tool</p>
             <div className="pl-1 text-sm">
-              <p className="pb-2">- Javascript, Typescript, HTML, CSS</p>
+              <p className="pb-2">- Javascript, Typescript</p>
+              <p className="pb-2">- HTML, CSS</p>
               <p className="pb-2">- Node, React</p>
               <p className="pb-2">- Express, Axios, React-Query</p>
               <p className="pb-2">- Styled-Components, Tailwind</p>

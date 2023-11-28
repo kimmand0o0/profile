@@ -20,7 +20,7 @@ const Typing = () => {
           </div>
           <div className="flex flex-row flex-wrap">
             <ReactTypingEffect
-              text={['프론트엔드', '백엔드', '풀스택']}
+              text={['프론트엔드', '백엔드']}
               speed={100}
               typingDelay={100}
               eraseDelay={3000}
