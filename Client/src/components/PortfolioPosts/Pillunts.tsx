@@ -22,7 +22,7 @@ const TAGS = [
   'AWS',
   'ECS',
   'EC2',
-  'RAMDA',
+  'Lambda',
 ];
 const GITHUB = 'https://github.com/E-GaeMuYac/Pillnuts_BE.git';
 const SINCE = '2022.12.30 - 2023.02.10';
