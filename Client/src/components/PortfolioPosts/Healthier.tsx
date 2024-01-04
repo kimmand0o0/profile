@@ -5,16 +5,16 @@ import Tag from './Tag';
 
 import github from '../../assets/icons/github.svg';
 
-import titleImg from '../../assets/portfolio/healthier/title.png';
-import signupImg from '../../assets/portfolio/healthier/sign up.gif';
-import loginImg from '../../assets/portfolio/healthier/login.gif';
-import oauthImg from '../../assets/portfolio/healthier/oauth.gif';
-import todopageImg from '../../assets/portfolio/healthier/todopage.gif';
+import titleImg from '../../assets/portfolio/healthier/title.webp';
+import signupImg from '../../assets/portfolio/healthier/sign-up.webp';
+import loginImg from '../../assets/portfolio/healthier/login.webp';
+import oauthImg from '../../assets/portfolio/healthier/oauth.webp';
+import todopageImg from '../../assets/portfolio/healthier/todopage.webp';
 import todopageEditImg from '../../assets/portfolio/healthier/todopage_edit.gif';
 import communityImg from '../../assets/portfolio/healthier/community.gif';
 import communityEditImg from '../../assets/portfolio/healthier/community_edit.gif';
 import scrapImg from '../../assets/portfolio/healthier/scrap.gif';
-import mypageImg from '../../assets/portfolio/healthier/mypage.gif';
+import mypageImg from '../../assets/portfolio/healthier/mypage.webp';
 import mypageEditImg from '../../assets/portfolio/healthier/mypage_edit.gif';
 
 const imageList = [

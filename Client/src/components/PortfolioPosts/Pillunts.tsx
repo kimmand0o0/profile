@@ -5,8 +5,8 @@ import Tag from './Tag';
 
 import github from '../../assets/icons/github.svg';
 
-import titleImg from '../../assets/portfolio/pillnuts/title.png';
-import awardImg from '../../assets/portfolio/pillnuts/award.jpeg';
+import titleImg from '../../assets/portfolio/pillnuts/title.webp';
+import awardImg from '../../assets/portfolio/pillnuts/award.webp';
 
 const imageList = [
   { src: titleImg, alt: 'title' },

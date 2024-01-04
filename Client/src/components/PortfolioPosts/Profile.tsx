@@ -9,9 +9,9 @@ import mainImg from '../../assets/portfolio/profile/main.gif';
 import aboutMeImg from '../../assets/portfolio/profile/aboutMe.gif';
 import footerImg from '../../assets/portfolio/profile/footer.gif';
 import postsImg from '../../assets/portfolio/profile/posts.gif';
-import portfolioImg from '../../assets/portfolio/profile/portfolio.gif';
+import portfolioImg from '../../assets/portfolio/profile/portfolio.webp';
 import guestbookImg from '../../assets/portfolio/profile/guestbook.gif';
-import publishImg from '../../assets/portfolio/profile/publish.png';
+import publishImg from '../../assets/portfolio/profile/publish.webp';
 
 const imageList = [
   { src: mainImg, alt: 'main' },

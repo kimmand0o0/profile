@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import AudioButton from 'components/AudioButton';
 import Nav from './Nav';
 
-import logo from '../../assets/images/logo192.png';
+import logo from '../../assets/images/logo192.webp';
 
 const Header = () => {
   const navigate = useNavigate();

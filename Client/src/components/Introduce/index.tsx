@@ -1,6 +1,6 @@
 import Typing from './Typing';
 
-import me from '../../assets/images/me.png';
+import me from '../../assets/images/me.webp';
 
 const Introduce = () => {
   return (
