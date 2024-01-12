@@ -1,5 +1,3 @@
-import javascriptIcon from '../../assets/icons/javascript.svg';
-
 const AboutMeSkills = () => {
   return (
     <>
@@ -18,7 +16,7 @@ const AboutMeSkills = () => {
               <p className="pb-2">- Styled-Components, Tailwind</p>
               <p className="pb-2">- MongoDB, MySQL</p>
               <p className="pb-2">- Git, Postman</p>
-              <p>- AWS(EC2, RDS S3, RAMDA)</p>
+              <p>- AWS(EC2, RDS S3, Lambda)</p>
             </div>
           </div>
           <div className="min-w-[50%] pl-4 py-1 border-l border-slate-100">

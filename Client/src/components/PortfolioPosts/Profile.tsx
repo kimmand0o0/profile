@@ -25,11 +25,13 @@ const imageList = [
 const TAGS = [
   '개인프로젝트',
   'React',
+  'Typescript',
   'Tailwind-css',
   'Tistory Open Api',
   'Strapi',
   'Axios',
-  'Cloudtype',
+  'Recoil',
+  'React-Query',
 ];
 const GITHUB = 'https://github.com/kimmand0o0/profile';
 const SINCE = '2023.10.01 - 2023.11.13';
@@ -37,15 +39,13 @@ const TITLE = 'Profile : 김혜란 블로그';
 const CONTENT = '- 저를 소개합니다.';
 const PERSONNEL = '개인 프로젝트';
 const WHAT_DID_I_DO = [
-  '무한 슬라이드를 개발하는 도중 setInterval에서 발생한 의도치 않은 동작을 해결하기 위해 useInterval이라는 커스텀 Hook을 활용했습니다 예상치 못한 이슈를 효과적으로 다룰 수 있게 되었습니다',
-  'Tistory API를 활용하여 블로그 게시글 목록을 불러오는 작업에서 서비스 URL을 제대로 이해하지 못해 일정한 어려움을 겪었습니다. 이 경험을 통해 공식 문서의 중요성을 다시 한번 깨달았습니다. 정확하고 명확한 문서를 통해 개발 프로세스에서 생길 수 있는 오류와 혼란을 최소화할 수 있다는 점을 깨달았습니다.',
-  'Strapi와 같은 headless CMS를 활용하여 Guestbook을 구현한 경험을 쌓았습니다. Headless CMS를 사용함으로써 데이터의 관리와 프론트엔드의 독립성을 갖추면서도 효과적인 개발이 가능했습니다. Strapi의 사용을 통해 Guestbook을 구현함으로써 데이터베이스와의 상호작용, 사용자 입력 관리, 백엔드 구축 등 다양한 측면에서의 경험을 얻었습니다.',
-  'Cloudtype을 이용하여 배포하였습니다. Strapi를 배포하는 과정에서 직접 배포가 되지 않아 Docker를 사용하여 애플리케이션과 그에 필요한 모든 종속성을 컨테이너로 패키징하여 배포 하였습니다.',
+  'Headless CMS인 Strapi를 통해 빠르게 개발환경 구축과 API를 작성하였습니다.',
+  'Recoil을 이용하여 오디오와 포트폴리오 페이지의 상태를 전역으로 관리하여 Prop drilling을 해결하였습니다.',
+  'React-query를 통해 비동기 통신의 상태를 관리하였습니다.',
 ];
 const RETROSPECT = [
-  'Tailwind CSS를 활용하여 모바일 및 반응형 웹을 구현하여 개발 속도를 향상시키고 일관된 코드 작성이 가능했습니다. 더불어, 코드의 쉬운 유지 보수와 관리를 통해 Dark mode에 대한 리팩토링 작업을 계획 중에 있습니다.',
-  '프로젝트를 처음부터 끝까지 완성하는 경험을 했습니다.',
-  '이 프로젝트는 처음으로 솔로로 진행한 것이었기 때문에, 레퍼런스를 찾는 것부터 모든 의사결정까지 혼자서 하게 되었습니다. 초기에는 많은 도전과 불확실성이 있었지만, MVP를 완성하고 동료들과 친구들에게 검수를 받으며 다양한 의견을 수렴할 수 있었습니다. 이 경험을 통해 동료들과 함께 협업하는 경험이 프로젝트의 완성도를 향상시키는 데에 큰 역할을 한다는 것을 깨닫게 되었습니다. 한 마디로, 동료의 중요성을 다시 한번 강하게 느낄 수 있었습니다.',
+  'WebP를 이용한 이미지 압축으로 빌드와 페이지 로딩 속도를 80%개선 하였습니다.',
+  '무한 슬라이드 구현 중 setInterval에서 의도하지 않은 동작 발생을 해결하였습니다.',
 ];
 
 const PortfolioPost = () => {
@@ -196,7 +196,7 @@ const PortfolioPost = () => {
                 </div>
               </div>
               <div className="pb-7">
-                <p className="font-bold">- Retrospect</p>
+                <p className="font-bold">- Trouble shooting</p>
                 <div>
                   {RETROSPECT.map((text: string, idx: number) => (
                     <li key={idx} className="my-3">
