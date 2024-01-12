@@ -11,7 +11,7 @@ const AboutMeIntroduction = () => {
           </p>
         </div>
         <div className="py-2">
-          <p className="m-1">✓ 주도적인 경험을 통한 발전</p>
+          <p className="m-1">✔️ 주도적인 경험을 통한 발전</p>
           <p className="m-1 text-sm">
             개발이 재밌어 공부와 프로젝트를 멈추지 않습니다. 이전 프로젝트에서
             얕은 경험을 한 TDD와 CICD 등을 다음 프로젝트에서 적용하여 깊게
@@ -19,7 +19,7 @@ const AboutMeIntroduction = () => {
           </p>
         </div>
         <div className="py-2">
-          <p className="m-1">✓ 협업 능력 : 함께 하고싶은 동기 1위</p>
+          <p className="m-1">✔️ 협업 능력 : 함께 하고싶은 동기 1위</p>
           <p className="m-1 text-sm">
             부트캠프 수료 후 팀을 같이 하고싶은 동기 1위 '든든한 국밥상'을
             수상하였습니다.
